@@ -58,6 +58,12 @@
     <Compile Include="FRM\FRMCLIENTES.Designer.cs">
       <DependentUpon>FRMCLIENTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM\FRMCOMPRAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FRMCOMPRAS.Designer.cs">
+      <DependentUpon>FRMCOMPRAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM\FRMPROVEDORES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM\FRMCLIENTES.resx">
       <DependentUpon>FRMCLIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FRMCOMPRAS.resx">
+      <DependentUpon>FRMCOMPRAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM\FRMPROVEDORES.resx">
       <DependentUpon>FRMPROVEDORES.cs</DependentUpon>
