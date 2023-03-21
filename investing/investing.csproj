@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FRM\Form1.cs">
+    <Compile Include="FRM\COMPRADETALLE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FRM\COMPRADETALLE.Designer.cs">
+      <DependentUpon>COMPRADETALLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FRMALMACEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FRMALMACEN.Designer.cs">
+      <DependentUpon>FRMALMACEN.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM\FRMCLIENTES.cs">
       <SubType>Form</SubType>
@@ -64,16 +70,43 @@
     <Compile Include="FRM\FRMCOMPRAS.Designer.cs">
       <DependentUpon>FRMCOMPRAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM\FRMPRODUCTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FRMPRODUCTOS.Designer.cs">
+      <DependentUpon>FRMPRODUCTOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM\FRMPROVEDORES.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRM\FRMPROVEDORES.Designer.cs">
       <DependentUpon>FRMPROVEDORES.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM\FRMUNIDAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FRMUNIDAD.Designer.cs">
+      <DependentUpon>FRMUNIDAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FRMVENTADETALLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FRMVENTADETALLE.Designer.cs">
+      <DependentUpon>FRMVENTADETALLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FRMVENTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FRMVENTAS.Designer.cs">
+      <DependentUpon>FRMVENTAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FRM\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FRM\COMPRADETALLE.resx">
+      <DependentUpon>COMPRADETALLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FRMALMACEN.resx">
+      <DependentUpon>FRMALMACEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM\FRMCLIENTES.resx">
       <DependentUpon>FRMCLIENTES.cs</DependentUpon>
@@ -81,8 +114,20 @@
     <EmbeddedResource Include="FRM\FRMCOMPRAS.resx">
       <DependentUpon>FRMCOMPRAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FRMPRODUCTOS.resx">
+      <DependentUpon>FRMPRODUCTOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM\FRMPROVEDORES.resx">
       <DependentUpon>FRMPROVEDORES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FRMUNIDAD.resx">
+      <DependentUpon>FRMUNIDAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FRMVENTADETALLE.resx">
+      <DependentUpon>FRMVENTADETALLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FRMVENTAS.resx">
+      <DependentUpon>FRMVENTAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

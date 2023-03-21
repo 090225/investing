@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace investing
+namespace investing.FRM
 {
-    public partial class Form1 : Form
+    public partial class FRMUNIDAD : Form
     {
-        public Form1()
+        public FRMUNIDAD()
         {
             InitializeComponent();
         }
