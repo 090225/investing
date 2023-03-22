@@ -48,7 +48,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -244,13 +244,13 @@
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 22;
             // 
-            // textBox1
+            // TxtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 50);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 21;
+            this.TxtId.Location = new System.Drawing.Point(163, 50);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(132, 22);
+            this.TxtId.TabIndex = 21;
             // 
             // textBox12
             // 
@@ -311,7 +311,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -357,7 +357,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
