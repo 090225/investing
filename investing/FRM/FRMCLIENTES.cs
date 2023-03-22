@@ -21,5 +21,10 @@ namespace investing.FRM
         {
 
         }
+
+        private void FRMCLIENTES_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

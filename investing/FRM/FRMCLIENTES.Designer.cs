@@ -41,44 +41,52 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.TxtRfc = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtLada = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtCalle = new System.Windows.Forms.TextBox();
+            this.TxtNumeroExt = new System.Windows.Forms.TextBox();
+            this.TxtCuentaBancaria = new System.Windows.Forms.TextBox();
+            this.TxtContacto = new System.Windows.Forms.TextBox();
+            this.TxtTelefonoContacto = new System.Windows.Forms.TextBox();
+            this.TxtRegimen = new System.Windows.Forms.TextBox();
+            this.BTNInsert = new System.Windows.Forms.Button();
+            this.BTNDelete = new System.Windows.Forms.Button();
+            this.BTNUpdate = new System.Windows.Forms.Button();
+            this.DTGClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DTGClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 0);
+            this.label1.Location = new System.Drawing.Point(16, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "CLIENTES";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 68);
+            this.label2.Location = new System.Drawing.Point(16, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "NOMBRE:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 28);
+            this.label3.Location = new System.Drawing.Point(44, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.Size = new System.Drawing.Size(23, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "ID:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -86,194 +94,257 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 121);
+            this.label4.Location = new System.Drawing.Point(16, 131);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(37, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "RFC:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 171);
+            this.label5.Location = new System.Drawing.Point(16, 192);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(68, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "CORREO:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 219);
+            this.label6.Location = new System.Drawing.Point(700, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 5;
             this.label6.Text = "LADA:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 262);
+            this.label7.Location = new System.Drawing.Point(700, 75);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.Size = new System.Drawing.Size(82, 16);
             this.label7.TabIndex = 6;
             this.label7.Text = "TELEFONO:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 304);
+            this.label8.Location = new System.Drawing.Point(700, 129);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.Size = new System.Drawing.Size(51, 16);
             this.label8.TabIndex = 7;
             this.label8.Text = "CALLE:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 345);
+            this.label9.Location = new System.Drawing.Point(700, 180);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 13);
+            this.label9.Size = new System.Drawing.Size(99, 16);
             this.label9.TabIndex = 8;
             this.label9.Text = "NUMERO EXT:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(240, 28);
+            this.label10.Location = new System.Drawing.Point(320, 34);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 13);
+            this.label10.Size = new System.Drawing.Size(137, 16);
             this.label10.TabIndex = 9;
             this.label10.Text = "CUENTA BANCARIA:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(243, 77);
+            this.label11.Location = new System.Drawing.Point(324, 95);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.Size = new System.Drawing.Size(85, 16);
             this.label11.TabIndex = 10;
             this.label11.Text = "CONTACTO:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(243, 121);
+            this.label12.Location = new System.Drawing.Point(324, 149);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(147, 13);
+            this.label12.Size = new System.Drawing.Size(182, 16);
             this.label12.TabIndex = 11;
             this.label12.Text = "TELEFONO DE CONTACTO:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(249, 171);
+            this.label13.Location = new System.Drawing.Point(368, 208);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.Size = new System.Drawing.Size(72, 16);
             this.label13.TabIndex = 12;
             this.label13.Text = "REGIMEN:";
             // 
-            // textBox1
+            // TxtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.TxtId.Location = new System.Drawing.Point(163, 19);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(132, 22);
+            this.TxtId.TabIndex = 13;
             // 
-            // textBox2
+            // TxtRfc
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 14;
+            this.TxtRfc.Location = new System.Drawing.Point(163, 131);
+            this.TxtRfc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtRfc.Name = "TxtRfc";
+            this.TxtRfc.Size = new System.Drawing.Size(132, 22);
+            this.TxtRfc.TabIndex = 14;
             // 
-            // textBox3
+            // TxtCorreo
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 15;
+            this.TxtCorreo.Location = new System.Drawing.Point(151, 186);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(132, 22);
+            this.TxtCorreo.TabIndex = 15;
             // 
-            // textBox4
+            // TxtNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 65);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 16;
+            this.TxtNombre.Location = new System.Drawing.Point(163, 62);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(132, 22);
+            this.TxtNombre.TabIndex = 16;
             // 
-            // textBox5
+            // TxtLada
             // 
-            this.textBox5.Location = new System.Drawing.Point(122, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 17;
+            this.TxtLada.Location = new System.Drawing.Point(847, 25);
+            this.TxtLada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLada.Name = "TxtLada";
+            this.TxtLada.Size = new System.Drawing.Size(132, 22);
+            this.TxtLada.TabIndex = 17;
             // 
-            // textBox6
+            // TxtTelefono
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 255);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 18;
+            this.TxtTelefono.Location = new System.Drawing.Point(847, 69);
+            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(132, 22);
+            this.TxtTelefono.TabIndex = 18;
             // 
-            // textBox7
+            // TxtCalle
             // 
-            this.textBox7.Location = new System.Drawing.Point(122, 301);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 19;
+            this.TxtCalle.Location = new System.Drawing.Point(847, 125);
+            this.TxtCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCalle.Name = "TxtCalle";
+            this.TxtCalle.Size = new System.Drawing.Size(132, 22);
+            this.TxtCalle.TabIndex = 19;
             // 
-            // textBox8
+            // TxtNumeroExt
             // 
-            this.textBox8.Location = new System.Drawing.Point(122, 338);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 20;
+            this.TxtNumeroExt.Location = new System.Drawing.Point(847, 171);
+            this.TxtNumeroExt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNumeroExt.Name = "TxtNumeroExt";
+            this.TxtNumeroExt.Size = new System.Drawing.Size(132, 22);
+            this.TxtNumeroExt.TabIndex = 20;
             // 
-            // textBox9
+            // TxtCuentaBancaria
             // 
-            this.textBox9.Location = new System.Drawing.Point(396, 28);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 21;
+            this.TxtCuentaBancaria.Location = new System.Drawing.Point(489, 31);
+            this.TxtCuentaBancaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCuentaBancaria.Name = "TxtCuentaBancaria";
+            this.TxtCuentaBancaria.Size = new System.Drawing.Size(132, 22);
+            this.TxtCuentaBancaria.TabIndex = 21;
             // 
-            // textBox10
+            // TxtContacto
             // 
-            this.textBox10.Location = new System.Drawing.Point(396, 77);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 22;
+            this.TxtContacto.Location = new System.Drawing.Point(498, 89);
+            this.TxtContacto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtContacto.Name = "TxtContacto";
+            this.TxtContacto.Size = new System.Drawing.Size(132, 22);
+            this.TxtContacto.TabIndex = 22;
             // 
-            // textBox11
+            // TxtTelefonoContacto
             // 
-            this.textBox11.Location = new System.Drawing.Point(396, 117);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 23;
+            this.TxtTelefonoContacto.Location = new System.Drawing.Point(528, 144);
+            this.TxtTelefonoContacto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTelefonoContacto.Name = "TxtTelefonoContacto";
+            this.TxtTelefonoContacto.Size = new System.Drawing.Size(132, 22);
+            this.TxtTelefonoContacto.TabIndex = 23;
             // 
-            // textBox12
+            // TxtRegimen
             // 
-            this.textBox12.Location = new System.Drawing.Point(396, 164);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 24;
+            this.TxtRegimen.Location = new System.Drawing.Point(528, 202);
+            this.TxtRegimen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtRegimen.Name = "TxtRegimen";
+            this.TxtRegimen.Size = new System.Drawing.Size(132, 22);
+            this.TxtRegimen.TabIndex = 24;
+            // 
+            // BTNInsert
+            // 
+            this.BTNInsert.Location = new System.Drawing.Point(19, 232);
+            this.BTNInsert.Name = "BTNInsert";
+            this.BTNInsert.Size = new System.Drawing.Size(75, 23);
+            this.BTNInsert.TabIndex = 25;
+            this.BTNInsert.Text = "INSERT";
+            this.BTNInsert.UseVisualStyleBackColor = true;
+            // 
+            // BTNDelete
+            // 
+            this.BTNDelete.Location = new System.Drawing.Point(137, 232);
+            this.BTNDelete.Name = "BTNDelete";
+            this.BTNDelete.Size = new System.Drawing.Size(75, 23);
+            this.BTNDelete.TabIndex = 26;
+            this.BTNDelete.Text = "DELETE";
+            this.BTNDelete.UseVisualStyleBackColor = true;
+            // 
+            // BTNUpdate
+            // 
+            this.BTNUpdate.Location = new System.Drawing.Point(254, 232);
+            this.BTNUpdate.Name = "BTNUpdate";
+            this.BTNUpdate.Size = new System.Drawing.Size(75, 23);
+            this.BTNUpdate.TabIndex = 27;
+            this.BTNUpdate.Text = "UPDATE";
+            this.BTNUpdate.UseVisualStyleBackColor = true;
+            // 
+            // DTGClientes
+            // 
+            this.DTGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DTGClientes.Location = new System.Drawing.Point(12, 337);
+            this.DTGClientes.Name = "DTGClientes";
+            this.DTGClientes.RowHeadersWidth = 51;
+            this.DTGClientes.RowTemplate.Height = 24;
+            this.DTGClientes.Size = new System.Drawing.Size(1363, 194);
+            this.DTGClientes.TabIndex = 28;
             // 
             // FRMCLIENTES
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1387, 554);
+            this.Controls.Add(this.DTGClientes);
+            this.Controls.Add(this.BTNUpdate);
+            this.Controls.Add(this.BTNDelete);
+            this.Controls.Add(this.BTNInsert);
+            this.Controls.Add(this.TxtRegimen);
+            this.Controls.Add(this.TxtTelefonoContacto);
+            this.Controls.Add(this.TxtContacto);
+            this.Controls.Add(this.TxtCuentaBancaria);
+            this.Controls.Add(this.TxtNumeroExt);
+            this.Controls.Add(this.TxtCalle);
+            this.Controls.Add(this.TxtTelefono);
+            this.Controls.Add(this.TxtLada);
+            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.TxtCorreo);
+            this.Controls.Add(this.TxtRfc);
+            this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -287,8 +358,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRMCLIENTES";
             this.Text = "FRMCLIENTES";
+            this.Load += new System.EventHandler(this.FRMCLIENTES_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DTGClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,17 +383,21 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.TextBox TxtRfc;
+        private System.Windows.Forms.TextBox TxtCorreo;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtLada;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtCalle;
+        private System.Windows.Forms.TextBox TxtNumeroExt;
+        private System.Windows.Forms.TextBox TxtCuentaBancaria;
+        private System.Windows.Forms.TextBox TxtContacto;
+        private System.Windows.Forms.TextBox TxtTelefonoContacto;
+        private System.Windows.Forms.TextBox TxtRegimen;
+        private System.Windows.Forms.Button BTNInsert;
+        private System.Windows.Forms.Button BTNDelete;
+        private System.Windows.Forms.Button BTNUpdate;
+        private System.Windows.Forms.DataGridView DTGClientes;
     }
 }

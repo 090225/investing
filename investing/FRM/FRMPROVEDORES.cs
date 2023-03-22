@@ -21,5 +21,10 @@ namespace investing.FRM
         {
 
         }
+
+        private void FRMPROVEDORES_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

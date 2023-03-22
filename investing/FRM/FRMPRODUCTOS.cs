@@ -16,5 +16,12 @@ namespace investing.FRM
         {
             InitializeComponent();
         }
+
+        private void FRMPRODUCTOS_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet1.PRODUCTOS' Puede moverla o quitarla según sea necesario.
+            this.pRODUCTOSTableAdapter.Fill(this.vENTASDataSet1.PRODUCTOS);
+
+        }
     }
 }
