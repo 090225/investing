@@ -29,47 +29,65 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CMBId = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.DTGAlmacen = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DTGAlmacen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(249, 197);
+            this.label1.Location = new System.Drawing.Point(388, 131);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 16);
+            this.label1.Size = new System.Drawing.Size(38, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // CMBId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(316, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
+            this.CMBId.FormattingEnabled = true;
+            this.CMBId.Location = new System.Drawing.Point(470, 123);
+            this.CMBId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CMBId.Name = "CMBId";
+            this.CMBId.Size = new System.Drawing.Size(180, 33);
+            this.CMBId.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(336, 94);
+            this.label2.Location = new System.Drawing.Point(485, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "ALMACEN";
             // 
+            // DTGAlmacen
+            // 
+            this.DTGAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DTGAlmacen.Location = new System.Drawing.Point(149, 348);
+            this.DTGAlmacen.Name = "DTGAlmacen";
+            this.DTGAlmacen.RowHeadersWidth = 82;
+            this.DTGAlmacen.RowTemplate.Height = 33;
+            this.DTGAlmacen.Size = new System.Drawing.Size(862, 269);
+            this.DTGAlmacen.TabIndex = 3;
+            // 
             // FRMALMACEN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.Controls.Add(this.DTGAlmacen);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CMBId);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FRMALMACEN";
             this.Text = "FRMALMACEN";
+            ((System.ComponentModel.ISupportInitialize)(this.DTGAlmacen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,7 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CMBId;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView DTGAlmacen;
     }
 }

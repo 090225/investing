@@ -28,188 +28,260 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.CMBUnidad = new System.Windows.Forms.ComboBox();
+            this.CMBTipoProducto = new System.Windows.Forms.ComboBox();
+            this.TxtIva = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtStockMaximo = new System.Windows.Forms.TextBox();
+            this.TxtStockMinimo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.BTNInsert = new System.Windows.Forms.Button();
+            this.BTNDelete = new System.Windows.Forms.Button();
+            this.BTNUpdate = new System.Windows.Forms.Button();
+            this.vENTASDataSet = new investing.VENTASDataSet();
+            this.vENTASDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // CMBUnidad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(218, 277);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 52;
+            this.CMBUnidad.FormattingEnabled = true;
+            this.CMBUnidad.Location = new System.Drawing.Point(313, 235);
+            this.CMBUnidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CMBUnidad.Name = "CMBUnidad";
+            this.CMBUnidad.Size = new System.Drawing.Size(180, 33);
+            this.CMBUnidad.TabIndex = 52;
             // 
-            // comboBox1
+            // CMBTipoProducto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(568, 218);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 51;
+            this.CMBTipoProducto.FormattingEnabled = true;
+            this.CMBTipoProducto.Location = new System.Drawing.Point(774, 132);
+            this.CMBTipoProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CMBTipoProducto.Name = "CMBTipoProducto";
+            this.CMBTipoProducto.Size = new System.Drawing.Size(180, 33);
+            this.CMBTipoProducto.TabIndex = 51;
             // 
-            // textBox8
+            // TxtIva
             // 
-            this.textBox8.Location = new System.Drawing.Point(568, 333);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 50;
+            this.TxtIva.Location = new System.Drawing.Point(774, 311);
+            this.TxtIva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtIva.Name = "TxtIva";
+            this.TxtIva.Size = new System.Drawing.Size(148, 31);
+            this.TxtIva.TabIndex = 50;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(449, 333);
+            this.label9.Location = new System.Drawing.Point(596, 311);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.Size = new System.Drawing.Size(51, 25);
             this.label9.TabIndex = 49;
-            this.label9.Text = "PR_IVA:";
+            this.label9.Text = "IVA:";
             // 
-            // textBox7
+            // TxtPrecio
             // 
-            this.textBox7.Location = new System.Drawing.Point(568, 277);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 48;
+            this.TxtPrecio.Location = new System.Drawing.Point(774, 224);
+            this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.Size = new System.Drawing.Size(148, 31);
+            this.TxtPrecio.TabIndex = 48;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(437, 270);
+            this.label8.Location = new System.Drawing.Point(578, 213);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 16);
+            this.label8.Size = new System.Drawing.Size(97, 25);
             this.label8.TabIndex = 47;
-            this.label8.Text = "PR_PRECIO:";
+            this.label8.Text = "PRECIO:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(417, 221);
+            this.label7.Location = new System.Drawing.Point(548, 136);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 16);
+            this.label7.Size = new System.Drawing.Size(185, 25);
             this.label7.TabIndex = 46;
-            this.label7.Text = "TIPOPRODUCTO";
+            this.label7.Text = "TIPOPRODUCTO:";
             // 
-            // textBox5
+            // TxtStockMaximo
             // 
-            this.textBox5.Location = new System.Drawing.Point(568, 166);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 45;
+            this.TxtStockMaximo.Location = new System.Drawing.Point(774, 50);
+            this.TxtStockMaximo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtStockMaximo.Name = "TxtStockMaximo";
+            this.TxtStockMaximo.Size = new System.Drawing.Size(148, 31);
+            this.TxtStockMaximo.TabIndex = 45;
             // 
-            // textBox4
+            // TxtStockMinimo
             // 
-            this.textBox4.Location = new System.Drawing.Point(239, 333);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 44;
+            this.TxtStockMinimo.Location = new System.Drawing.Point(344, 322);
+            this.TxtStockMinimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtStockMinimo.Name = "TxtStockMinimo";
+            this.TxtStockMinimo.Size = new System.Drawing.Size(148, 31);
+            this.TxtStockMinimo.TabIndex = 44;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(428, 169);
+            this.label6.Location = new System.Drawing.Point(564, 55);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 16);
+            this.label6.Size = new System.Drawing.Size(175, 25);
             this.label6.TabIndex = 43;
-            this.label6.Text = "STOCKMAXIMO";
+            this.label6.Text = "STOCKMAXIMO:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 336);
+            this.label5.Location = new System.Drawing.Point(152, 327);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
+            this.label5.Size = new System.Drawing.Size(167, 25);
             this.label5.TabIndex = 42;
-            this.label5.Text = "STOCKMINIMO";
+            this.label5.Text = "STOCKMINIMO:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 280);
+            this.label4.Location = new System.Drawing.Point(158, 240);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.Size = new System.Drawing.Size(97, 25);
             this.label4.TabIndex = 41;
-            this.label4.Text = "UNIDAD";
+            this.label4.Text = "UNIDAD:";
             // 
-            // textBox2
+            // TxtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 40;
+            this.TxtNombre.Location = new System.Drawing.Point(344, 147);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(148, 31);
+            this.TxtNombre.TabIndex = 40;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 224);
+            this.label3.Location = new System.Drawing.Point(158, 152);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.Size = new System.Drawing.Size(110, 25);
             this.label3.TabIndex = 39;
-            this.label3.Text = "NOMBRE";
+            this.label3.Text = "NOMBRE:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 163);
+            this.label2.Location = new System.Drawing.Point(217, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 16);
+            this.label2.Size = new System.Drawing.Size(38, 25);
             this.label2.TabIndex = 38;
-            this.label2.Text = "ID";
+            this.label2.Text = "ID:";
             // 
-            // textBox1
+            // TxtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 37;
+            this.TxtId.Location = new System.Drawing.Point(326, 57);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(148, 31);
+            this.TxtId.TabIndex = 37;
             // 
-            // label1
+            // BTNInsert
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "PRODUCTOS";
+            this.BTNInsert.Location = new System.Drawing.Point(1055, 57);
+            this.BTNInsert.Name = "BTNInsert";
+            this.BTNInsert.Size = new System.Drawing.Size(109, 49);
+            this.BTNInsert.TabIndex = 54;
+            this.BTNInsert.Text = "INSERT";
+            this.BTNInsert.UseVisualStyleBackColor = true;
+            // 
+            // BTNDelete
+            // 
+            this.BTNDelete.Location = new System.Drawing.Point(1055, 136);
+            this.BTNDelete.Name = "BTNDelete";
+            this.BTNDelete.Size = new System.Drawing.Size(109, 49);
+            this.BTNDelete.TabIndex = 55;
+            this.BTNDelete.Text = "DELETE";
+            this.BTNDelete.UseVisualStyleBackColor = true;
+            // 
+            // BTNUpdate
+            // 
+            this.BTNUpdate.Location = new System.Drawing.Point(1055, 206);
+            this.BTNUpdate.Name = "BTNUpdate";
+            this.BTNUpdate.Size = new System.Drawing.Size(109, 49);
+            this.BTNUpdate.TabIndex = 56;
+            this.BTNUpdate.Text = "UPDATE";
+            this.BTNUpdate.UseVisualStyleBackColor = true;
+            // 
+            // vENTASDataSet
+            // 
+            this.vENTASDataSet.DataSetName = "VENTASDataSet";
+            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vENTASDataSetBindingSource
+            // 
+            this.vENTASDataSetBindingSource.DataSource = this.vENTASDataSet;
+            this.vENTASDataSetBindingSource.Position = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.vENTASDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(96, 480);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1092, 175);
+            this.dataGridView1.TabIndex = 57;
             // 
             // FRMPRODUCTOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox8);
+            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.BTNUpdate);
+            this.Controls.Add(this.BTNDelete);
+            this.Controls.Add(this.BTNInsert);
+            this.Controls.Add(this.CMBUnidad);
+            this.Controls.Add(this.CMBTipoProducto);
+            this.Controls.Add(this.TxtIva);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.TxtPrecio);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TxtStockMaximo);
+            this.Controls.Add(this.TxtStockMinimo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtId);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FRMPRODUCTOS";
             this.Text = "FRMPRODUCTOS";
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,22 +289,27 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox CMBUnidad;
+        private System.Windows.Forms.ComboBox CMBTipoProducto;
+        private System.Windows.Forms.TextBox TxtIva;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtStockMaximo;
+        private System.Windows.Forms.TextBox TxtStockMinimo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.BindingSource vENTASDataSetBindingSource;
+        private VENTASDataSet vENTASDataSet;
+        private System.Windows.Forms.Button BTNInsert;
+        private System.Windows.Forms.Button BTNDelete;
+        private System.Windows.Forms.Button BTNUpdate;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
