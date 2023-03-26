@@ -21,5 +21,15 @@ namespace investing.FRM
         {
 
         }
+
+        private void FRMVENTAS_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DTGVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

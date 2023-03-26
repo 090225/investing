@@ -45,16 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
-            this.BTNInsert = new System.Windows.Forms.Button();
-            this.BTNDelete = new System.Windows.Forms.Button();
-            this.BTNUpdate = new System.Windows.Forms.Button();
-            this.vENTASDataSet = new investing.VENTASDataSet();
-            this.vENTASDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet1 = new investing.VENTASDataSet1();
-            this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOSTableAdapter = new investing.VENTASDataSet1TableAdapters.PRODUCTOSTableAdapter();
-            this.pRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRNOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIDUNIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRSTOCKMINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,226 +52,190 @@
             this.pRIDTPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRPRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).BeginInit();
+            this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet1 = new investing.VENTASDataSet1();
+            this.BTNGUARDAR = new System.Windows.Forms.Button();
+            this.dtgproductos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRNOMBREDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRIDUNIDADDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRSTOCKMINDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRIDTPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRPRECIODataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRIVADataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet10 = new investing.VENTASDataSet10();
+            this.pRODUCTOSTableAdapter = new investing.VENTASDataSet10TableAdapters.PRODUCTOSTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgproductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CMBUnidad
             // 
             this.CMBUnidad.FormattingEnabled = true;
-            this.CMBUnidad.Location = new System.Drawing.Point(209, 150);
+            this.CMBUnidad.Location = new System.Drawing.Point(371, 260);
+            this.CMBUnidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CMBUnidad.Name = "CMBUnidad";
-            this.CMBUnidad.Size = new System.Drawing.Size(121, 24);
+            this.CMBUnidad.Size = new System.Drawing.Size(180, 33);
             this.CMBUnidad.TabIndex = 52;
+            this.CMBUnidad.SelectedIndexChanged += new System.EventHandler(this.CMBUnidad_SelectedIndexChanged);
             // 
             // CMBTipoProducto
             // 
             this.CMBTipoProducto.FormattingEnabled = true;
-            this.CMBTipoProducto.Location = new System.Drawing.Point(516, 84);
+            this.CMBTipoProducto.Location = new System.Drawing.Point(831, 157);
+            this.CMBTipoProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CMBTipoProducto.Name = "CMBTipoProducto";
-            this.CMBTipoProducto.Size = new System.Drawing.Size(121, 24);
+            this.CMBTipoProducto.Size = new System.Drawing.Size(180, 33);
             this.CMBTipoProducto.TabIndex = 51;
+            this.CMBTipoProducto.SelectedIndexChanged += new System.EventHandler(this.CMBTipoProducto_SelectedIndexChanged);
             // 
             // TxtIva
             // 
-            this.TxtIva.Location = new System.Drawing.Point(516, 199);
+            this.TxtIva.Location = new System.Drawing.Point(831, 337);
+            this.TxtIva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtIva.Name = "TxtIva";
-            this.TxtIva.Size = new System.Drawing.Size(100, 22);
+            this.TxtIva.Size = new System.Drawing.Size(148, 31);
             this.TxtIva.TabIndex = 50;
+            this.TxtIva.TextChanged += new System.EventHandler(this.TxtIva_TextChanged);
+            this.TxtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIva_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(397, 199);
+            this.label9.Location = new System.Drawing.Point(614, 337);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 16);
+            this.label9.Size = new System.Drawing.Size(51, 25);
             this.label9.TabIndex = 49;
             this.label9.Text = "IVA:";
             // 
             // TxtPrecio
             // 
-            this.TxtPrecio.Location = new System.Drawing.Point(516, 143);
+            this.TxtPrecio.Location = new System.Drawing.Point(831, 254);
+            this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPrecio.Name = "TxtPrecio";
-            this.TxtPrecio.Size = new System.Drawing.Size(100, 22);
+            this.TxtPrecio.Size = new System.Drawing.Size(148, 31);
             this.TxtPrecio.TabIndex = 48;
+            this.TxtPrecio.TextChanged += new System.EventHandler(this.TxtPrecio_TextChanged_1);
+            this.TxtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecio_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(385, 136);
+            this.label8.Location = new System.Drawing.Point(611, 260);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 16);
+            this.label8.Size = new System.Drawing.Size(97, 25);
             this.label8.TabIndex = 47;
             this.label8.Text = "PRECIO:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(365, 87);
+            this.label7.Location = new System.Drawing.Point(611, 165);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 16);
+            this.label7.Size = new System.Drawing.Size(185, 25);
             this.label7.TabIndex = 46;
             this.label7.Text = "TIPOPRODUCTO:";
             // 
             // TxtStockMaximo
             // 
-            this.TxtStockMaximo.Location = new System.Drawing.Point(516, 32);
+            this.TxtStockMaximo.Location = new System.Drawing.Point(831, 76);
+            this.TxtStockMaximo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtStockMaximo.Name = "TxtStockMaximo";
-            this.TxtStockMaximo.Size = new System.Drawing.Size(100, 22);
+            this.TxtStockMaximo.Size = new System.Drawing.Size(148, 31);
             this.TxtStockMaximo.TabIndex = 45;
+            this.TxtStockMaximo.TextChanged += new System.EventHandler(this.TxtStockMaximo_TextChanged);
+            this.TxtStockMaximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtStockMaximo_KeyPress);
             // 
             // TxtStockMinimo
             // 
-            this.TxtStockMinimo.Location = new System.Drawing.Point(229, 206);
+            this.TxtStockMinimo.Location = new System.Drawing.Point(371, 347);
+            this.TxtStockMinimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtStockMinimo.Name = "TxtStockMinimo";
-            this.TxtStockMinimo.Size = new System.Drawing.Size(100, 22);
+            this.TxtStockMinimo.Size = new System.Drawing.Size(148, 31);
             this.TxtStockMinimo.TabIndex = 44;
+            this.TxtStockMinimo.TextChanged += new System.EventHandler(this.TxtStockMinimo_TextChanged);
+            this.TxtStockMinimo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtStockMinimo_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(376, 35);
+            this.label6.Location = new System.Drawing.Point(611, 82);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 16);
+            this.label6.Size = new System.Drawing.Size(175, 25);
             this.label6.TabIndex = 43;
             this.label6.Text = "STOCKMAXIMO:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(101, 209);
+            this.label5.Location = new System.Drawing.Point(158, 350);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 16);
+            this.label5.Size = new System.Drawing.Size(167, 25);
             this.label5.TabIndex = 42;
             this.label5.Text = "STOCKMINIMO:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(105, 154);
+            this.label4.Location = new System.Drawing.Point(158, 268);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.Size = new System.Drawing.Size(97, 25);
             this.label4.TabIndex = 41;
             this.label4.Text = "UNIDAD:";
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(229, 94);
+            this.TxtNombre.Location = new System.Drawing.Point(371, 175);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(100, 22);
+            this.TxtNombre.Size = new System.Drawing.Size(148, 31);
             this.TxtNombre.TabIndex = 40;
+            this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 97);
+            this.label3.Location = new System.Drawing.Point(158, 178);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.Size = new System.Drawing.Size(110, 25);
             this.label3.TabIndex = 39;
             this.label3.Text = "NOMBRE:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(145, 36);
+            this.label2.Location = new System.Drawing.Point(158, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 16);
+            this.label2.Size = new System.Drawing.Size(38, 25);
             this.label2.TabIndex = 38;
             this.label2.Text = "ID:";
             // 
             // TxtId
             // 
-            this.TxtId.Location = new System.Drawing.Point(217, 36);
+            this.TxtId.Location = new System.Drawing.Point(371, 82);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(100, 22);
+            this.TxtId.Size = new System.Drawing.Size(148, 31);
             this.TxtId.TabIndex = 37;
-            // 
-            // BTNInsert
-            // 
-            this.BTNInsert.Location = new System.Drawing.Point(703, 36);
-            this.BTNInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTNInsert.Name = "BTNInsert";
-            this.BTNInsert.Size = new System.Drawing.Size(73, 31);
-            this.BTNInsert.TabIndex = 54;
-            this.BTNInsert.Text = "INSERT";
-            this.BTNInsert.UseVisualStyleBackColor = true;
-            // 
-            // BTNDelete
-            // 
-            this.BTNDelete.Location = new System.Drawing.Point(703, 87);
-            this.BTNDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTNDelete.Name = "BTNDelete";
-            this.BTNDelete.Size = new System.Drawing.Size(73, 31);
-            this.BTNDelete.TabIndex = 55;
-            this.BTNDelete.Text = "DELETE";
-            this.BTNDelete.UseVisualStyleBackColor = true;
-            // 
-            // BTNUpdate
-            // 
-            this.BTNUpdate.Location = new System.Drawing.Point(703, 132);
-            this.BTNUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTNUpdate.Name = "BTNUpdate";
-            this.BTNUpdate.Size = new System.Drawing.Size(73, 31);
-            this.BTNUpdate.TabIndex = 56;
-            this.BTNUpdate.Text = "UPDATE";
-            this.BTNUpdate.UseVisualStyleBackColor = true;
-            // 
-            // vENTASDataSet
-            // 
-            this.vENTASDataSet.DataSetName = "VENTASDataSet";
-            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vENTASDataSetBindingSource
-            // 
-            this.vENTASDataSetBindingSource.DataSource = this.vENTASDataSet;
-            this.vENTASDataSetBindingSource.Position = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.pRIDDataGridViewTextBoxColumn,
-            this.pRNOMBREDataGridViewTextBoxColumn,
-            this.pRIDUNIDADDataGridViewTextBoxColumn,
-            this.pRSTOCKMINDataGridViewTextBoxColumn,
-            this.pRSTOCKMAXDataGridViewTextBoxColumn,
-            this.pRIDTPDataGridViewTextBoxColumn,
-            this.pRPRECIODataGridViewTextBoxColumn,
-            this.pRIVADataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pRODUCTOSBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 247);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 192);
-            this.dataGridView1.TabIndex = 57;
-            // 
-            // vENTASDataSet1
-            // 
-            this.vENTASDataSet1.DataSetName = "VENTASDataSet1";
-            this.vENTASDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pRODUCTOSBindingSource
-            // 
-            this.pRODUCTOSBindingSource.DataMember = "PRODUCTOS";
-            this.pRODUCTOSBindingSource.DataSource = this.vENTASDataSet1;
-            // 
-            // pRODUCTOSTableAdapter
-            // 
-            this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // pRIDDataGridViewTextBoxColumn
-            // 
-            this.pRIDDataGridViewTextBoxColumn.DataPropertyName = "PR_ID";
-            this.pRIDDataGridViewTextBoxColumn.HeaderText = "PR_ID";
-            this.pRIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pRIDDataGridViewTextBoxColumn.Name = "pRIDDataGridViewTextBoxColumn";
-            this.pRIDDataGridViewTextBoxColumn.Width = 125;
+            this.TxtId.TextChanged += new System.EventHandler(this.TxtId_TextChanged);
+            this.TxtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtId_KeyPress);
             // 
             // pRNOMBREDataGridViewTextBoxColumn
             // 
@@ -339,15 +293,155 @@
             this.pRIVADataGridViewTextBoxColumn.Name = "pRIVADataGridViewTextBoxColumn";
             this.pRIVADataGridViewTextBoxColumn.Width = 125;
             // 
+            // pRODUCTOSBindingSource
+            // 
+            this.pRODUCTOSBindingSource.DataSource = this.vENTASDataSet1;
+            this.pRODUCTOSBindingSource.Position = 0;
+            // 
+            // vENTASDataSet1
+            // 
+            this.vENTASDataSet1.DataSetName = "VENTASDataSet1";
+            this.vENTASDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BTNGUARDAR
+            // 
+            this.BTNGUARDAR.BackColor = System.Drawing.Color.Chartreuse;
+            this.BTNGUARDAR.Location = new System.Drawing.Point(514, 419);
+            this.BTNGUARDAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BTNGUARDAR.Name = "BTNGUARDAR";
+            this.BTNGUARDAR.Size = new System.Drawing.Size(228, 61);
+            this.BTNGUARDAR.TabIndex = 60;
+            this.BTNGUARDAR.Text = "Guardar/Actualizar";
+            this.BTNGUARDAR.UseVisualStyleBackColor = false;
+            this.BTNGUARDAR.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // dtgproductos
+            // 
+            this.dtgproductos.AutoGenerateColumns = false;
+            this.dtgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.pRNOMBREDataGridViewTextBoxColumn1,
+            this.pRIDUNIDADDataGridViewTextBoxColumn1,
+            this.pRSTOCKMINDataGridViewTextBoxColumn1,
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1,
+            this.pRIDTPDataGridViewTextBoxColumn1,
+            this.pRPRECIODataGridViewTextBoxColumn1,
+            this.pRIVADataGridViewTextBoxColumn1});
+            this.dtgproductos.DataSource = this.pRODUCTOSBindingSource1;
+            this.dtgproductos.Location = new System.Drawing.Point(82, 501);
+            this.dtgproductos.Name = "dtgproductos";
+            this.dtgproductos.RowHeadersWidth = 82;
+            this.dtgproductos.RowTemplate.Height = 33;
+            this.dtgproductos.Size = new System.Drawing.Size(1152, 371);
+            this.dtgproductos.TabIndex = 62;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PR_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PR_ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRNOMBREDataGridViewTextBoxColumn1
+            // 
+            this.pRNOMBREDataGridViewTextBoxColumn1.DataPropertyName = "PR_NOMBRE";
+            this.pRNOMBREDataGridViewTextBoxColumn1.HeaderText = "PR_NOMBRE";
+            this.pRNOMBREDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRNOMBREDataGridViewTextBoxColumn1.Name = "pRNOMBREDataGridViewTextBoxColumn1";
+            this.pRNOMBREDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRIDUNIDADDataGridViewTextBoxColumn1
+            // 
+            this.pRIDUNIDADDataGridViewTextBoxColumn1.DataPropertyName = "PR_ID_UNIDAD";
+            this.pRIDUNIDADDataGridViewTextBoxColumn1.HeaderText = "PR_ID_UNIDAD";
+            this.pRIDUNIDADDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRIDUNIDADDataGridViewTextBoxColumn1.Name = "pRIDUNIDADDataGridViewTextBoxColumn1";
+            this.pRIDUNIDADDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRSTOCKMINDataGridViewTextBoxColumn1
+            // 
+            this.pRSTOCKMINDataGridViewTextBoxColumn1.DataPropertyName = "PR_STOCK_MIN";
+            this.pRSTOCKMINDataGridViewTextBoxColumn1.HeaderText = "PR_STOCK_MIN";
+            this.pRSTOCKMINDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRSTOCKMINDataGridViewTextBoxColumn1.Name = "pRSTOCKMINDataGridViewTextBoxColumn1";
+            this.pRSTOCKMINDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRSTOCKMAXDataGridViewTextBoxColumn1
+            // 
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1.DataPropertyName = "PR_STOCK_MAX";
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1.HeaderText = "PR_STOCK_MAX";
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1.Name = "pRSTOCKMAXDataGridViewTextBoxColumn1";
+            this.pRSTOCKMAXDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRIDTPDataGridViewTextBoxColumn1
+            // 
+            this.pRIDTPDataGridViewTextBoxColumn1.DataPropertyName = "PR_ID_TP";
+            this.pRIDTPDataGridViewTextBoxColumn1.HeaderText = "PR_ID_TP";
+            this.pRIDTPDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRIDTPDataGridViewTextBoxColumn1.Name = "pRIDTPDataGridViewTextBoxColumn1";
+            this.pRIDTPDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRPRECIODataGridViewTextBoxColumn1
+            // 
+            this.pRPRECIODataGridViewTextBoxColumn1.DataPropertyName = "PR_PRECIO";
+            this.pRPRECIODataGridViewTextBoxColumn1.HeaderText = "PR_PRECIO";
+            this.pRPRECIODataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRPRECIODataGridViewTextBoxColumn1.Name = "pRPRECIODataGridViewTextBoxColumn1";
+            this.pRPRECIODataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRIVADataGridViewTextBoxColumn1
+            // 
+            this.pRIVADataGridViewTextBoxColumn1.DataPropertyName = "PR_IVA";
+            this.pRIVADataGridViewTextBoxColumn1.HeaderText = "PR_IVA";
+            this.pRIVADataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.pRIVADataGridViewTextBoxColumn1.Name = "pRIVADataGridViewTextBoxColumn1";
+            this.pRIVADataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // pRODUCTOSBindingSource1
+            // 
+            this.pRODUCTOSBindingSource1.DataMember = "PRODUCTOS";
+            this.pRODUCTOSBindingSource1.DataSource = this.vENTASDataSet10;
+            // 
+            // vENTASDataSet10
+            // 
+            this.vENTASDataSet10.DataSetName = "VENTASDataSet10";
+            this.vENTASDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUCTOSTableAdapter
+            // 
+            this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(539, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 25);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "PRODUCTOS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::investing.Properties.Resources.COMPRAS;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
+            // 
             // FRMPRODUCTOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.BTNUpdate);
-            this.Controls.Add(this.BTNDelete);
-            this.Controls.Add(this.BTNInsert);
+            this.ClientSize = new System.Drawing.Size(1332, 943);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dtgproductos);
+            this.Controls.Add(this.BTNGUARDAR);
             this.Controls.Add(this.CMBUnidad);
             this.Controls.Add(this.CMBTipoProducto);
             this.Controls.Add(this.TxtIva);
@@ -364,14 +458,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtId);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FRMPRODUCTOS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMPRODUCTOS";
             this.Load += new System.EventHandler(this.FRMPRODUCTOS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgproductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,14 +493,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.BindingSource vENTASDataSetBindingSource;
-        private VENTASDataSet vENTASDataSet;
-        private System.Windows.Forms.Button BTNInsert;
-        private System.Windows.Forms.Button BTNDelete;
-        private System.Windows.Forms.Button BTNUpdate;
+    
         private System.Windows.Forms.DataGridView dataGridView1;
         private VENTASDataSet1 vENTASDataSet1;
         private System.Windows.Forms.BindingSource pRODUCTOSBindingSource;
-        private VENTASDataSet1TableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter;
+ 
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRNOMBREDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIDUNIDADDataGridViewTextBoxColumn;
@@ -412,5 +506,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIDTPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRPRECIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIVADataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button BTNGUARDAR;
+        private System.Windows.Forms.DataGridView dtgproductos;
+        private VENTASDataSet10 vENTASDataSet10;
+        private System.Windows.Forms.BindingSource pRODUCTOSBindingSource1;
+        private VENTASDataSet10TableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRNOMBREDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRIDUNIDADDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRSTOCKMINDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRSTOCKMAXDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRIDTPDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRPRECIODataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRIVADataGridViewTextBoxColumn1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

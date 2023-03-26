@@ -46,12 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FRM\COMPRADETALLE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRM\COMPRADETALLE.Designer.cs">
-      <DependentUpon>COMPRADETALLE.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="FRM\FRMALMACEN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,17 +83,23 @@
     <Compile Include="FRM\FRMUNIDAD.Designer.cs">
       <DependentUpon>FRMUNIDAD.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM\FRMVENTADETALLE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRM\FRMVENTADETALLE.Designer.cs">
-      <DependentUpon>FRMVENTADETALLE.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRM\FRMVENTAS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRM\FRMVENTAS.Designer.cs">
       <DependentUpon>FRMVENTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\Invenatario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\Invenatario.Designer.cs">
+      <DependentUpon>Invenatario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,14 +108,64 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTASDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VENTASDataSet1.cs">
+      <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VENTASDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FRM\COMPRADETALLE.resx">
-      <DependentUpon>COMPRADETALLE.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="VENTASDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet9.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FRM\FRMALMACEN.resx">
       <DependentUpon>FRMALMACEN.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,11 +184,14 @@
     <EmbeddedResource Include="FRM\FRMUNIDAD.resx">
       <DependentUpon>FRMUNIDAD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM\FRMVENTADETALLE.resx">
-      <DependentUpon>FRMVENTADETALLE.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRM\FRMVENTAS.resx">
       <DependentUpon>FRMVENTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\Invenatario.resx">
+      <DependentUpon>Invenatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -147,6 +201,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,9 +234,146 @@
     <None Include="VENTASDataSet1.xss">
       <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="VENTASDataSet10.xsc">
+      <DependentUpon>VENTASDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet10.xss">
+      <DependentUpon>VENTASDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet11.xsc">
+      <DependentUpon>VENTASDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet11.xss">
+      <DependentUpon>VENTASDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet21.xsc">
+      <DependentUpon>VENTASDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet21.xss">
+      <DependentUpon>VENTASDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet3.xsc">
+      <DependentUpon>VENTASDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet3.xss">
+      <DependentUpon>VENTASDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet4.xsc">
+      <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet4.xss">
+      <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet5.xsc">
+      <DependentUpon>VENTASDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet5.xss">
+      <DependentUpon>VENTASDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet6.xsc">
+      <DependentUpon>VENTASDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet6.xss">
+      <DependentUpon>VENTASDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet7.xsc">
+      <DependentUpon>VENTASDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet7.xss">
+      <DependentUpon>VENTASDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet8.xsc">
+      <DependentUpon>VENTASDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet8.xss">
+      <DependentUpon>VENTASDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet9.xsc">
+      <DependentUpon>VENTASDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet9.xss">
+      <DependentUpon>VENTASDataSet9.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ALMACEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLIENTE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRODCUTOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COMPRAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PROVEEDOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UNIDAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VENTAS.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
