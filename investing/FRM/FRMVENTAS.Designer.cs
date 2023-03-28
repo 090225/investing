@@ -53,21 +53,21 @@
             this.tMPIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tMPVENTADETALLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vENTASDataSet3 = new investing.VENTASDataSet3();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTNELIMINAR = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TXTFOLIO = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TXTCANTIDAD = new System.Windows.Forms.TextBox();
+            this.TXTIMPORTE = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TXTIVA = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DTPFECHA = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.BTNAGG = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TXTPRODUCTO = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tMPVENTADETALLEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet3)).BeginInit();
@@ -292,16 +292,17 @@
             this.vENTASDataSet3.DataSetName = "VENTASDataSet3";
             this.vENTASDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // BTNELIMINAR
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(1018, 424);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 61);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BTNELIMINAR.BackColor = System.Drawing.Color.Red;
+            this.BTNELIMINAR.Location = new System.Drawing.Point(1018, 424);
+            this.BTNELIMINAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BTNELIMINAR.Name = "BTNELIMINAR";
+            this.BTNELIMINAR.Size = new System.Drawing.Size(112, 61);
+            this.BTNELIMINAR.TabIndex = 37;
+            this.BTNELIMINAR.Text = "Eliminar";
+            this.BTNELIMINAR.UseVisualStyleBackColor = false;
+            this.BTNELIMINAR.Click += new System.EventHandler(this.BTNELIMINAR_Click);
             // 
             // button2
             // 
@@ -313,6 +314,7 @@
             this.button2.TabIndex = 36;
             this.button2.Text = "Guardar Venta";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -324,12 +326,12 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // TXTFOLIO
             // 
-            this.textBox1.Location = new System.Drawing.Point(338, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 31);
-            this.textBox1.TabIndex = 39;
+            this.TXTFOLIO.Location = new System.Drawing.Point(338, 121);
+            this.TXTFOLIO.Name = "TXTFOLIO";
+            this.TXTFOLIO.Size = new System.Drawing.Size(180, 31);
+            this.TXTFOLIO.TabIndex = 39;
             // 
             // label7
             // 
@@ -341,20 +343,20 @@
             this.label7.TabIndex = 41;
             this.label7.Text = "Producto:";
             // 
-            // textBox2
+            // TXTCANTIDAD
             // 
-            this.textBox2.Location = new System.Drawing.Point(228, 476);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 31);
-            this.textBox2.TabIndex = 45;
+            this.TXTCANTIDAD.Location = new System.Drawing.Point(228, 476);
+            this.TXTCANTIDAD.Name = "TXTCANTIDAD";
+            this.TXTCANTIDAD.Size = new System.Drawing.Size(180, 31);
+            this.TXTCANTIDAD.TabIndex = 45;
             // 
-            // textBox3
+            // TXTIMPORTE
             // 
-            this.textBox3.Location = new System.Drawing.Point(616, 411);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 31);
-            this.textBox3.TabIndex = 44;
+            this.TXTIMPORTE.Location = new System.Drawing.Point(616, 411);
+            this.TXTIMPORTE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TXTIMPORTE.Name = "TXTIMPORTE";
+            this.TXTIMPORTE.Size = new System.Drawing.Size(180, 31);
+            this.TXTIMPORTE.TabIndex = 44;
             // 
             // label9
             // 
@@ -376,13 +378,13 @@
             this.label10.TabIndex = 42;
             this.label10.Text = "Cantidad";
             // 
-            // textBox4
+            // TXTIVA
             // 
-            this.textBox4.Location = new System.Drawing.Point(616, 470);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 31);
-            this.textBox4.TabIndex = 47;
+            this.TXTIVA.Location = new System.Drawing.Point(616, 470);
+            this.TXTIVA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TXTIVA.Name = "TXTIVA";
+            this.TXTIVA.Size = new System.Drawing.Size(180, 31);
+            this.TXTIVA.TabIndex = 47;
             // 
             // label11
             // 
@@ -394,12 +396,12 @@
             this.label11.TabIndex = 46;
             this.label11.Text = "Iva";
             // 
-            // dateTimePicker1
+            // DTPFECHA
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1243, 199);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker1.TabIndex = 48;
+            this.DTPFECHA.Location = new System.Drawing.Point(1243, 199);
+            this.DTPFECHA.Name = "DTPFECHA";
+            this.DTPFECHA.Size = new System.Drawing.Size(200, 31);
+            this.DTPFECHA.TabIndex = 48;
             // 
             // label12
             // 
@@ -421,33 +423,34 @@
             this.BTNAGG.TabIndex = 50;
             this.BTNAGG.Text = "AGREGAR";
             this.BTNAGG.UseVisualStyleBackColor = false;
+            this.BTNAGG.Click += new System.EventHandler(this.BTNAGG_Click);
             // 
-            // textBox5
+            // TXTPRODUCTO
             // 
-            this.textBox5.Location = new System.Drawing.Point(228, 406);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 31);
-            this.textBox5.TabIndex = 51;
+            this.TXTPRODUCTO.Location = new System.Drawing.Point(228, 406);
+            this.TXTPRODUCTO.Name = "TXTPRODUCTO";
+            this.TXTPRODUCTO.Size = new System.Drawing.Size(180, 31);
+            this.TXTPRODUCTO.TabIndex = 51;
             // 
             // FRMVENTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1820, 950);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.TXTPRODUCTO);
             this.Controls.Add(this.BTNAGG);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.DTPFECHA);
+            this.Controls.Add(this.TXTIVA);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TXTCANTIDAD);
+            this.Controls.Add(this.TXTIMPORTE);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TXTFOLIO);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTNELIMINAR);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.DTGVentas);
             this.Controls.Add(this.label8);
@@ -503,20 +506,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tMPIVADataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource tMPVENTADETALLEBindingSource;
         private VENTASDataSet3 vENTASDataSet3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTNELIMINAR;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TXTFOLIO;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TXTCANTIDAD;
+        private System.Windows.Forms.TextBox TXTIMPORTE;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TXTIVA;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTPFECHA;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button BTNAGG;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TXTPRODUCTO;
     }
 }
