@@ -77,11 +77,11 @@ namespace investing.FRM
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT PRO_NOMBRE FROM PROVEEDORES", con);
+            SqlCommand cmd = new SqlCommand("SELECT PRO_ID FROM PROVEEDORES", con);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())
             {
-                CMBProveedor.Items.Add(registro["PRO_NOMBRE"].ToString());
+                CMBProveedor.Items.Add(registro["PRO_ID"].ToString());
             }
 
 
@@ -92,11 +92,11 @@ namespace investing.FRM
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT DESCRIPCION FROM TIPO_DOCUMENTO ", con);
+            SqlCommand cmd = new SqlCommand("SELECT ID_TIPODOCTO FROM TIPO_DOCUMENTO ", con);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())
             {
-                CMBTipoDocumento.Items.Add(registro["DESCRIPCION"].ToString());
+                CMBTipoDocumento.Items.Add(registro["ID_TIPODOCTO"].ToString());
             }
 
 
@@ -107,11 +107,11 @@ namespace investing.FRM
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT AL_NOMBRE FROM ALMACENES", con);
+            SqlCommand cmd = new SqlCommand("SELECT AL_ID FROM ALMACENES", con);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())
             {
-                CMBAlmacen.Items.Add(registro["AL_NOMBRE"].ToString());
+                CMBAlmacen.Items.Add(registro["AL_ID"].ToString());
             }
 
 
@@ -133,7 +133,7 @@ namespace investing.FRM
             cmd.Parameters.AddWithValue("@CO_ID_PROVEEDOR", CMBProveedor.Text);
             cmd.Parameters.AddWithValue("@CO_ID_ALMACEN", CMBAlmacen.Text);
             cmd.Parameters.AddWithValue("@CO_FACTURA", TxtFactura.Text);
-            cmd.Parameters.AddWithValue("@CO_FECHA", DTMFecha.Text);
+            cmd.Parameters.AddWithValue("@CO_FECHA", Convert.ToDateTime(DTMFecha.Text));
      
 
 
@@ -185,11 +185,7 @@ namespace investing.FRM
 
         }
 
-        private void BTNInsert_Click(object sender, EventArgs e)
-        {
-            guardar();
-            mostrar();
-        }
+       
 
         private void BTNDelete_Click(object sender, EventArgs e)
         {
@@ -200,6 +196,17 @@ namespace investing.FRM
         private void CMBTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void BTNInsert_Click_1(object sender, EventArgs e)
+        {
+            guardar();
+            mostrar();
+        }
+
+        private void DTMFecha_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,6 +53,8 @@ namespace investing.FRM
             }
             finally { con.Close(); }
         }
+
+
         private void guardar()
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
@@ -92,7 +94,7 @@ namespace investing.FRM
             DTGUNIDAD.DataSource = dt;
 
         }
-        private void eliminar ()
+        private void actualizar ()
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
             SqlCommand cmd = new SqlCommand("", con);
@@ -102,8 +104,9 @@ namespace investing.FRM
             cmd.CommandText = "SP_UNIDAD";
             cmd.Parameters.AddWithValue("@OP", 2);
             cmd.Parameters.AddWithValue("@UN_ID", txtid.Text);
+            cmd.Parameters.AddWithValue("@UN_DESCRIPCION", txtdesc.Text);
 
-            MessageBox.Show("SUS DATOS SE eliminaron");
+            MessageBox.Show("SUS DATOS SE  actualizaron");
 
             try
             {
@@ -201,6 +204,12 @@ namespace investing.FRM
         private void txtdesc_TextChanged(object sender, EventArgs e)
         {
             VALIDARCAMPO();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            actualizar();
+            mostrar ();
         }
     }
 }

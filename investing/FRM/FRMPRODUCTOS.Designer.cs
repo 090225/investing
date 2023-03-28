@@ -1,6 +1,6 @@
 ﻿namespace investing.FRM
 {
-    partial class FRMPRODUCTOS
+    partial class W
     {
         /// <summary>
         /// Required designer variable.
@@ -69,6 +69,7 @@
             this.pRODUCTOSTableAdapter = new investing.VENTASDataSet10TableAdapters.PRODUCTOSTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnactualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgproductos)).BeginInit();
@@ -101,6 +102,7 @@
             // 
             this.TxtIva.Location = new System.Drawing.Point(831, 337);
             this.TxtIva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtIva.MaxLength = 15;
             this.TxtIva.Name = "TxtIva";
             this.TxtIva.Size = new System.Drawing.Size(148, 31);
             this.TxtIva.TabIndex = 50;
@@ -121,6 +123,7 @@
             // 
             this.TxtPrecio.Location = new System.Drawing.Point(831, 254);
             this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtPrecio.MaxLength = 15;
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.Size = new System.Drawing.Size(148, 31);
             this.TxtPrecio.TabIndex = 48;
@@ -151,6 +154,7 @@
             // 
             this.TxtStockMaximo.Location = new System.Drawing.Point(831, 76);
             this.TxtStockMaximo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtStockMaximo.MaxLength = 15;
             this.TxtStockMaximo.Name = "TxtStockMaximo";
             this.TxtStockMaximo.Size = new System.Drawing.Size(148, 31);
             this.TxtStockMaximo.TabIndex = 45;
@@ -161,6 +165,7 @@
             // 
             this.TxtStockMinimo.Location = new System.Drawing.Point(371, 347);
             this.TxtStockMinimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtStockMinimo.MaxLength = 15;
             this.TxtStockMinimo.Name = "TxtStockMinimo";
             this.TxtStockMinimo.Size = new System.Drawing.Size(148, 31);
             this.TxtStockMinimo.TabIndex = 44;
@@ -201,6 +206,7 @@
             // 
             this.TxtNombre.Location = new System.Drawing.Point(371, 175);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtNombre.MaxLength = 100;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(148, 31);
             this.TxtNombre.TabIndex = 40;
@@ -306,12 +312,12 @@
             // BTNGUARDAR
             // 
             this.BTNGUARDAR.BackColor = System.Drawing.Color.Chartreuse;
-            this.BTNGUARDAR.Location = new System.Drawing.Point(514, 419);
+            this.BTNGUARDAR.Location = new System.Drawing.Point(371, 419);
             this.BTNGUARDAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNGUARDAR.Name = "BTNGUARDAR";
             this.BTNGUARDAR.Size = new System.Drawing.Size(228, 61);
             this.BTNGUARDAR.TabIndex = 60;
-            this.BTNGUARDAR.Text = "Guardar/Actualizar";
+            this.BTNGUARDAR.Text = "Guardar";
             this.BTNGUARDAR.UseVisualStyleBackColor = false;
             this.BTNGUARDAR.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -433,11 +439,24 @@
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
             // 
-            // FRMPRODUCTOS
+            // btnactualizar
+            // 
+            this.btnactualizar.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnactualizar.Location = new System.Drawing.Point(710, 419);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(228, 61);
+            this.btnactualizar.TabIndex = 65;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.UseVisualStyleBackColor = false;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
+            // W
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1332, 943);
+            this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtgproductos);
@@ -459,7 +478,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtId);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FRMPRODUCTOS";
+            this.Name = "W";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMPRODUCTOS";
             this.Load += new System.EventHandler(this.FRMPRODUCTOS_Load);
@@ -521,5 +540,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIVADataGridViewTextBoxColumn1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnactualizar;
     }
 }

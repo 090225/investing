@@ -37,7 +37,7 @@ namespace investing.FRM
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FRMPRODUCTOS productos = new FRMPRODUCTOS();
+            W productos = new W();
             productos.Show();
         }
 

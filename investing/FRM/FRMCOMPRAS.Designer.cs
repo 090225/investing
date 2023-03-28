@@ -308,6 +308,7 @@
             this.DTMFecha.Name = "DTMFecha";
             this.DTMFecha.Size = new System.Drawing.Size(200, 31);
             this.DTMFecha.TabIndex = 17;
+            this.DTMFecha.ValueChanged += new System.EventHandler(this.DTMFecha_ValueChanged);
             // 
             // cOMPRASTableAdapter
             // 
@@ -334,6 +335,7 @@
             this.BTNInsert.TabIndex = 36;
             this.BTNInsert.Text = "Guardar/Actualizar";
             this.BTNInsert.UseVisualStyleBackColor = false;
+            this.BTNInsert.Click += new System.EventHandler(this.BTNInsert_Click_1);
             // 
             // pictureBox1
             // 

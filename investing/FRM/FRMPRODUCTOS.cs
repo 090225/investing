@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace investing.FRM
 {
-    public partial class FRMPRODUCTOS : Form
+    public partial class W : Form
     {
-        public FRMPRODUCTOS()
+        public W()
         {
             InitializeComponent();
             CMBUnidad.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -116,6 +116,43 @@ namespace investing.FRM
 
 
             MessageBox.Show("SUS DATOS SE GUARDARON");
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show("NO SE ACTUALIZARON" + EX);
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        private void ACTUALIZAR()
+        {
+            SqlConnection con = new SqlConnection(Conexion.conect());
+            SqlCommand cmd = new SqlCommand("", con);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_PRODUCTOS";
+            cmd.Parameters.AddWithValue("@OP", 3);
+            cmd.Parameters.AddWithValue("@PR_ID", TxtId.Text);
+            cmd.Parameters.AddWithValue("@PR_NOMBRE", TxtNombre.Text);
+            cmd.Parameters.AddWithValue("@PR_ID_UNIDAD", CMBUnidad.Text);
+            cmd.Parameters.AddWithValue("@PR_STOCK_MIN", TxtStockMinimo.Text);
+            cmd.Parameters.AddWithValue("@PR_STOCK_MAX", TxtStockMaximo.Text);
+            cmd.Parameters.AddWithValue("@PR_ID_TP", CMBTipoProducto.Text);
+            cmd.Parameters.AddWithValue("@PR_PRECIO", TxtPrecio.Text);
+            cmd.Parameters.AddWithValue("@PR_IVA", TxtIva.Text);
+
+
+
+
+            MessageBox.Show("SUS DATOS SE ACTUALIZARON");
 
             try
             {
@@ -358,6 +395,12 @@ namespace investing.FRM
         private void TxtIva_TextChanged(object sender, EventArgs e)
         {
             VALIDARCAMPO();
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            ACTUALIZAR();
+            mostrar();
         }
     }
 }

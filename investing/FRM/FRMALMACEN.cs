@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace investing.FRM
 {
@@ -30,11 +31,11 @@ namespace investing.FRM
 
         private void FRMALMACEN_Load(object sender, EventArgs e)
         {
-            consecutivo();
+            
 
             // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet2.ALMACENES' Puede moverla o quitarla según sea necesario.
             this.aLMACENESTableAdapter.Fill(this.vENTASDataSet2.ALMACENES);
-
+            consecutivo();
         }
         private void guardar()
         {
@@ -65,6 +66,36 @@ namespace investing.FRM
                 con.Close();
             }
         }
+        private void ACTUALIZAR()
+        {
+            SqlConnection con = new SqlConnection(Conexion.conect());
+            SqlCommand cmd = new SqlCommand("", con);
+
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_ALMACENES";
+            cmd.Parameters.AddWithValue("@OP", 3);
+            cmd.Parameters.AddWithValue("@AL_ID", TxtId.Text);
+            cmd.Parameters.AddWithValue("@AL_NOMBRE", TxtNombre.Text);
+
+            MessageBox.Show("SUS DATOS SE ACTUALIZARON");
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show("NO SE ACTUALIZARON" + EX);
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         private void consecutivo()
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
@@ -129,6 +160,7 @@ namespace investing.FRM
 
         }
 
+
         private void BTNDelete_Click(object sender, EventArgs e)
         {
             eliminar();
@@ -141,46 +173,26 @@ namespace investing.FRM
             mostrar();
         }
 
-        private void DTGAlmacen_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
+       
         private void VALIDARCAMPO()
         {
             var vr = !string.IsNullOrEmpty(TxtNombre.Text);
            
             BTNInsert.Enabled = vr;
-            var rv = !string.IsNullOrEmpty(TxtId.Text);
-            BTNDelete.Enabled = rv;
+            
 
 
         }
         private void TxtId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-
-
-
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("Solo se admiten datos numéricos", "validación de texto",
-               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+           
             
         }
 
         private void TxtId_TextChanged(object sender, EventArgs e)
         {
-            VALIDARCAMPO();
-            consecutivo();
+           VALIDARCAMPO();
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
@@ -210,19 +222,12 @@ namespace investing.FRM
 
         }
 
-        private void DTGAlmacen_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            TxtId.Text = this.vENTASDataSet2.ALMACENES[this.aLMACENESBindingSource.Position].AL_ID.ToString();
-        }
+      
 
-        private void DTGAlmacen_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnactualizar_Click(object sender, EventArgs e)
         {
-            TxtId.Text = this.vENTASDataSet2.ALMACENES[this.aLMACENESBindingSource.Position].AL_ID.ToString();
-        }
-
-        private void DTGAlmacen_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            TxtId.Text = this.vENTASDataSet2.ALMACENES[this.aLMACENESBindingSource.Position].AL_ID.ToString();
+            ACTUALIZAR();
+            mostrar();
         }
     } 
 }

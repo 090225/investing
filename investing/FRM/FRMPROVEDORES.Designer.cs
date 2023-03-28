@@ -73,6 +73,7 @@
             this.pROVEEDORESTableAdapter = new investing.VENTASDataSet6TableAdapters.PROVEEDORESTableAdapter();
             this.CMBREGIMEN = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnactualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTGProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROVEEDORESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).BeginInit();
@@ -214,6 +215,7 @@
             // 
             this.txtnumext.Location = new System.Drawing.Point(1360, 327);
             this.txtnumext.Margin = new System.Windows.Forms.Padding(6);
+            this.txtnumext.MaxLength = 10;
             this.txtnumext.Name = "txtnumext";
             this.txtnumext.Size = new System.Drawing.Size(196, 31);
             this.txtnumext.TabIndex = 28;
@@ -224,6 +226,7 @@
             // 
             this.txtcalle.Location = new System.Drawing.Point(1360, 243);
             this.txtcalle.Margin = new System.Windows.Forms.Padding(6);
+            this.txtcalle.MaxLength = 150;
             this.txtcalle.Name = "txtcalle";
             this.txtcalle.Size = new System.Drawing.Size(196, 31);
             this.txtcalle.TabIndex = 27;
@@ -233,6 +236,7 @@
             // 
             this.txttelefono.Location = new System.Drawing.Point(1360, 174);
             this.txttelefono.Margin = new System.Windows.Forms.Padding(6);
+            this.txttelefono.MaxLength = 7;
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(196, 31);
             this.txttelefono.TabIndex = 26;
@@ -243,6 +247,7 @@
             // 
             this.txtlada.Location = new System.Drawing.Point(1360, 89);
             this.txtlada.Margin = new System.Windows.Forms.Padding(6);
+            this.txtlada.MaxLength = 3;
             this.txtlada.Name = "txtlada";
             this.txtlada.Size = new System.Drawing.Size(196, 31);
             this.txtlada.TabIndex = 25;
@@ -253,6 +258,7 @@
             // 
             this.txtnombre.Location = new System.Drawing.Point(372, 174);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(6);
+            this.txtnombre.MaxLength = 200;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(196, 31);
             this.txtnombre.TabIndex = 24;
@@ -263,6 +269,7 @@
             // 
             this.txtcorreo.Location = new System.Drawing.Point(372, 313);
             this.txtcorreo.Margin = new System.Windows.Forms.Padding(6);
+            this.txtcorreo.MaxLength = 200;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(196, 31);
             this.txtcorreo.TabIndex = 23;
@@ -272,6 +279,7 @@
             // 
             this.txtrfc.Location = new System.Drawing.Point(372, 240);
             this.txtrfc.Margin = new System.Windows.Forms.Padding(6);
+            this.txtrfc.MaxLength = 13;
             this.txtrfc.Name = "txtrfc";
             this.txtrfc.Size = new System.Drawing.Size(196, 31);
             this.txtrfc.TabIndex = 22;
@@ -291,6 +299,7 @@
             // 
             this.txttelefonoc.Location = new System.Drawing.Point(944, 252);
             this.txttelefonoc.Margin = new System.Windows.Forms.Padding(6);
+            this.txttelefonoc.MaxLength = 10;
             this.txttelefonoc.Name = "txttelefonoc";
             this.txttelefonoc.Size = new System.Drawing.Size(196, 31);
             this.txttelefonoc.TabIndex = 31;
@@ -301,6 +310,7 @@
             // 
             this.txtcontacto.Location = new System.Drawing.Point(944, 174);
             this.txtcontacto.Margin = new System.Windows.Forms.Padding(6);
+            this.txtcontacto.MaxLength = 150;
             this.txtcontacto.Name = "txtcontacto";
             this.txtcontacto.Size = new System.Drawing.Size(196, 31);
             this.txtcontacto.TabIndex = 30;
@@ -310,6 +320,7 @@
             // 
             this.txtcuentab.Location = new System.Drawing.Point(944, 95);
             this.txtcuentab.Margin = new System.Windows.Forms.Padding(6);
+            this.txtcuentab.MaxLength = 150;
             this.txtcuentab.Name = "txtcuentab";
             this.txtcuentab.Size = new System.Drawing.Size(196, 31);
             this.txtcuentab.TabIndex = 29;
@@ -467,7 +478,7 @@
             this.BTNInsert.Name = "BTNInsert";
             this.BTNInsert.Size = new System.Drawing.Size(228, 50);
             this.BTNInsert.TabIndex = 34;
-            this.BTNInsert.Text = "Guardar/Actualizar";
+            this.BTNInsert.Text = "Guardar";
             this.BTNInsert.UseVisualStyleBackColor = false;
             this.BTNInsert.Click += new System.EventHandler(this.BTNInsert_Click);
             // 
@@ -494,11 +505,24 @@
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
             // 
+            // btnactualizar
+            // 
+            this.btnactualizar.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnactualizar.Location = new System.Drawing.Point(619, 371);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(228, 50);
+            this.btnactualizar.TabIndex = 38;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.UseVisualStyleBackColor = false;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
             // FRMPROVEDORES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1672, 866);
+            this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CMBREGIMEN);
             this.Controls.Add(this.BTNDelete);
@@ -589,5 +613,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pROREGIMENDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox CMBREGIMEN;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnactualizar;
     }
 }

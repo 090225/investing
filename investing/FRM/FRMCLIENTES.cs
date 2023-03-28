@@ -19,7 +19,8 @@ namespace investing.FRM
             CMBREGIMEN.DropDownStyle = ComboBoxStyle.DropDownList;
             BTNDelete.Enabled = false;
             BTNInsert.Enabled = false;
-           
+            REGIMEN();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace investing.FRM
         {
             // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet4.CLIENTES' Puede moverla o quitarla según sea necesario.
             this.cLIENTESTableAdapter.Fill(this.vENTASDataSet4.CLIENTES);
-            REGIMEN();
+         
             consecutivo();
 
         }
@@ -82,7 +83,7 @@ namespace investing.FRM
         }
            
 
-            private void guardar()
+        private void guardar()
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
             SqlCommand cmd = new SqlCommand("", con);
@@ -91,6 +92,47 @@ namespace investing.FRM
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_CLIENTES";
             cmd.Parameters.AddWithValue("@OP", 1);
+            cmd.Parameters.AddWithValue("@CL_ID", TxtId.Text);
+            cmd.Parameters.AddWithValue("@CL_NOMBRE", TxtNombre.Text);
+            cmd.Parameters.AddWithValue("@CL_RFC", TxtRfc.Text);
+            cmd.Parameters.AddWithValue("@CL_CORREO", TxtCorreo.Text);
+            cmd.Parameters.AddWithValue("@CL_LADA", TxtLada.Text);
+            cmd.Parameters.AddWithValue("@CL_TELEFONO", TxtTelefono.Text);
+            cmd.Parameters.AddWithValue("@CL_CALLE", TxtCalle.Text);
+            cmd.Parameters.AddWithValue("@CL_NUMERO_EXT", TxtNumeroExt.Text);
+            cmd.Parameters.AddWithValue("@CL_CTABANCARIA", TxtCuentaBancaria.Text);
+            cmd.Parameters.AddWithValue("@CL_CONTACTO", TxtContacto.Text);
+            cmd.Parameters.AddWithValue("@CL_TELEF_CONTACTO", TxtTelefonoContacto.Text);
+            cmd.Parameters.AddWithValue("@CL_REGIMEN", CMBREGIMEN.Text);
+
+
+
+            MessageBox.Show("SUS DATOS SE GUARDARON");
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show("NO SE ACTUALIZARON" + EX);
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        private void actualizar()
+        {
+            SqlConnection con = new SqlConnection(Conexion.conect());
+            SqlCommand cmd = new SqlCommand("", con);
+
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_CLIENTES";
+            cmd.Parameters.AddWithValue("@OP", 3);
             cmd.Parameters.AddWithValue("@CL_ID", TxtId.Text);
             cmd.Parameters.AddWithValue("@CL_NOMBRE", TxtNombre.Text);
             cmd.Parameters.AddWithValue("@CL_RFC", TxtRfc.Text);
@@ -375,6 +417,12 @@ namespace investing.FRM
         private void DTGClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            actualizar();
+            mostrar();
         }
     }
 }

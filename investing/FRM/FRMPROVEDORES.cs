@@ -18,6 +18,7 @@ namespace investing.FRM
             InitializeComponent();
             BTNDelete.Enabled = false;
             BTNInsert.Enabled = false;
+            btnactualizar.Enabled = false;
             REGIMEN();
             CMBREGIMEN.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -73,7 +74,7 @@ namespace investing.FRM
         private void guardar()
         {
             SqlConnection con = new SqlConnection(Conexion.conect());
-            SqlCommand cmd = new SqlCommand("",con);
+            SqlCommand cmd = new SqlCommand("", con);
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_PROVEEDORES";
@@ -97,9 +98,46 @@ namespace investing.FRM
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+            catch (Exception EX)
+            {
+                MessageBox.Show("NO SE GUARDARON" + EX);
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        private void ACTUALIZAR()
+        {
+            SqlConnection con = new SqlConnection(Conexion.conect());
+            SqlCommand cmd = new SqlCommand("",con);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_PROVEEDORES";
+            cmd.Parameters.AddWithValue("@OP", 3);
+            cmd.Parameters.AddWithValue("@PRO_ID", TxtId.Text);
+            cmd.Parameters.AddWithValue("@PRO_NOMBRE", txtnombre.Text);
+            cmd.Parameters.AddWithValue("@PRO_RFC", txtrfc.Text);
+            cmd.Parameters.AddWithValue("@PRO_CORREO", txtcorreo.Text);
+            cmd.Parameters.AddWithValue("@PRO_LADA", txtlada.Text);
+            cmd.Parameters.AddWithValue("@PRO_TELEFONO", txttelefono.Text);
+            cmd.Parameters.AddWithValue("@PRO_CALLE", txtcalle.Text);
+            cmd.Parameters.AddWithValue("@PRO_NUMERO_EXT", txtnumext.Text);
+            cmd.Parameters.AddWithValue("@PRO_CTABANCARIA", txtcuentab.Text);
+            cmd.Parameters.AddWithValue("@PRO_CONTACTO", txtcontacto.Text);
+            cmd.Parameters.AddWithValue("@PRO_TELEF_CONTACTO", txttelefonoc.Text);
+            cmd.Parameters.AddWithValue("@PRO_REGIMEN", CMBREGIMEN.Text);
+            MessageBox.Show("SUS DATOS SE ACTUALIZARON");
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
             catch (Exception EX) 
             {
-                MessageBox.Show("NO SE GUARDARON"+ EX);
+                MessageBox.Show("NO SE ACTUALIZARON"+ EX);
                 
             }
             finally
@@ -159,6 +197,7 @@ namespace investing.FRM
                 !string.IsNullOrEmpty(txtcalle.Text) && !string.IsNullOrEmpty(txtnumext.Text);
 
             BTNInsert.Enabled = vr;
+            btnactualizar.Enabled = vr;
             var rv = !string.IsNullOrEmpty(TxtId.Text);
             BTNDelete.Enabled = rv;
 
@@ -361,6 +400,13 @@ namespace investing.FRM
                 MessageBox.Show("Solo se admiten datos numéricos", "validación de texto",
                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            
+            ACTUALIZAR();
+            mostrar();
         }
     }
 }

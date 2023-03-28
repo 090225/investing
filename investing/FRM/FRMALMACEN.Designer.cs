@@ -43,6 +43,7 @@
             this.BTNInsert = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTNDelete = new System.Windows.Forms.Button();
+            this.btnactualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTGAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet2)).BeginInit();
@@ -87,10 +88,7 @@
             this.DTGAlmacen.RowTemplate.Height = 33;
             this.DTGAlmacen.Size = new System.Drawing.Size(526, 269);
             this.DTGAlmacen.TabIndex = 3;
-            this.DTGAlmacen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGAlmacen_CellClick);
-            this.DTGAlmacen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGAlmacen_CellContentClick);
-            this.DTGAlmacen.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGAlmacen_CellContentDoubleClick);
-            this.DTGAlmacen.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGAlmacen_CellDoubleClick);
+          
             // 
             // aLIDDataGridViewTextBoxColumn
             // 
@@ -134,6 +132,7 @@
             // 
             this.TxtNombre.Location = new System.Drawing.Point(272, 209);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtNombre.MaxLength = 50;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(148, 31);
             this.TxtNombre.TabIndex = 5;
@@ -160,9 +159,9 @@
             this.BTNInsert.Location = new System.Drawing.Point(100, 276);
             this.BTNInsert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNInsert.Name = "BTNInsert";
-            this.BTNInsert.Size = new System.Drawing.Size(243, 57);
+            this.BTNInsert.Size = new System.Drawing.Size(144, 57);
             this.BTNInsert.TabIndex = 28;
-            this.BTNInsert.Text = "Guardar/Actualizar";
+            this.BTNInsert.Text = "Guardar";
             this.BTNInsert.UseVisualStyleBackColor = false;
             this.BTNInsert.Click += new System.EventHandler(this.BTNInsert_Click);
             // 
@@ -179,7 +178,7 @@
             // BTNDelete
             // 
             this.BTNDelete.BackColor = System.Drawing.Color.Red;
-            this.BTNDelete.Location = new System.Drawing.Point(440, 276);
+            this.BTNDelete.Location = new System.Drawing.Point(290, 276);
             this.BTNDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNDelete.Name = "BTNDelete";
             this.BTNDelete.Size = new System.Drawing.Size(146, 57);
@@ -188,11 +187,24 @@
             this.BTNDelete.UseVisualStyleBackColor = false;
             this.BTNDelete.Click += new System.EventHandler(this.BTNDelete_Click);
             // 
+            // btnactualizar
+            // 
+            this.btnactualizar.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnactualizar.Location = new System.Drawing.Point(491, 276);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(135, 57);
+            this.btnactualizar.TabIndex = 31;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.UseVisualStyleBackColor = false;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
             // FRMALMACEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 664);
+            this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BTNDelete);
             this.Controls.Add(this.BTNInsert);
@@ -232,5 +244,6 @@
         private System.Windows.Forms.Button BTNInsert;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BTNDelete;
+        private System.Windows.Forms.Button btnactualizar;
     }
 }

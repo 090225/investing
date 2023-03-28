@@ -42,6 +42,7 @@
             this.vENTASDataSet7 = new investing.VENTASDataSet7();
             this.uNIDADTableAdapter = new investing.VENTASDataSet7TableAdapters.UNIDADTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnact = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTGUNIDAD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNIDADBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet7)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             this.txtdesc.Location = new System.Drawing.Point(444, 163);
             this.txtdesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtdesc.MaxLength = 100;
             this.txtdesc.Name = "txtdesc";
             this.txtdesc.Size = new System.Drawing.Size(148, 31);
             this.txtdesc.TabIndex = 8;
@@ -101,12 +103,12 @@
             // BTNInsert
             // 
             this.BTNInsert.BackColor = System.Drawing.Color.LawnGreen;
-            this.BTNInsert.Location = new System.Drawing.Point(312, 244);
+            this.BTNInsert.Location = new System.Drawing.Point(140, 239);
             this.BTNInsert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNInsert.Name = "BTNInsert";
             this.BTNInsert.Size = new System.Drawing.Size(237, 64);
             this.BTNInsert.TabIndex = 28;
-            this.BTNInsert.Text = "Guardar/Actualizar";
+            this.BTNInsert.Text = "Guardar";
             this.BTNInsert.UseVisualStyleBackColor = false;
             this.BTNInsert.Click += new System.EventHandler(this.BTNInsert_Click);
             // 
@@ -171,11 +173,24 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // btnact
+            // 
+            this.btnact.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnact.Location = new System.Drawing.Point(489, 239);
+            this.btnact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnact.Name = "btnact";
+            this.btnact.Size = new System.Drawing.Size(237, 64);
+            this.btnact.TabIndex = 33;
+            this.btnact.Text = "Actualizar";
+            this.btnact.UseVisualStyleBackColor = false;
+            this.btnact.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FRMUNIDAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 633);
+            this.Controls.Add(this.btnact);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DTGUNIDAD);
             this.Controls.Add(this.BTNInsert);
@@ -213,5 +228,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn uNIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uNDESCRIPCIONDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnact;
     }
 }

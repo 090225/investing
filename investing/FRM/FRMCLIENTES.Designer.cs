@@ -73,6 +73,7 @@
             this.BTNInsert = new System.Windows.Forms.Button();
             this.CMBREGIMEN = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnactualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTGClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet4)).BeginInit();
@@ -224,6 +225,7 @@
             // 
             this.TxtRfc.Location = new System.Drawing.Point(285, 291);
             this.TxtRfc.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtRfc.MaxLength = 13;
             this.TxtRfc.Name = "TxtRfc";
             this.TxtRfc.Size = new System.Drawing.Size(196, 31);
             this.TxtRfc.TabIndex = 14;
@@ -233,6 +235,7 @@
             // 
             this.TxtCorreo.Location = new System.Drawing.Point(285, 373);
             this.TxtCorreo.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtCorreo.MaxLength = 200;
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(196, 31);
             this.TxtCorreo.TabIndex = 15;
@@ -242,6 +245,7 @@
             // 
             this.TxtNombre.Location = new System.Drawing.Point(285, 199);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtNombre.MaxLength = 200;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(196, 31);
             this.TxtNombre.TabIndex = 16;
@@ -252,6 +256,7 @@
             // 
             this.TxtLada.Location = new System.Drawing.Point(1365, 110);
             this.TxtLada.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtLada.MaxLength = 3;
             this.TxtLada.Name = "TxtLada";
             this.TxtLada.Size = new System.Drawing.Size(196, 31);
             this.TxtLada.TabIndex = 17;
@@ -262,6 +267,7 @@
             // 
             this.TxtTelefono.Location = new System.Drawing.Point(1365, 199);
             this.TxtTelefono.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtTelefono.MaxLength = 7;
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(196, 31);
             this.TxtTelefono.TabIndex = 18;
@@ -272,6 +278,7 @@
             // 
             this.TxtCalle.Location = new System.Drawing.Point(1365, 285);
             this.TxtCalle.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtCalle.MaxLength = 150;
             this.TxtCalle.Name = "TxtCalle";
             this.TxtCalle.Size = new System.Drawing.Size(196, 31);
             this.TxtCalle.TabIndex = 19;
@@ -281,6 +288,7 @@
             // 
             this.TxtNumeroExt.Location = new System.Drawing.Point(1365, 367);
             this.TxtNumeroExt.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtNumeroExt.MaxLength = 10;
             this.TxtNumeroExt.Name = "TxtNumeroExt";
             this.TxtNumeroExt.Size = new System.Drawing.Size(196, 31);
             this.TxtNumeroExt.TabIndex = 20;
@@ -291,6 +299,7 @@
             // 
             this.TxtCuentaBancaria.Location = new System.Drawing.Point(887, 107);
             this.TxtCuentaBancaria.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtCuentaBancaria.MaxLength = 150;
             this.TxtCuentaBancaria.Name = "TxtCuentaBancaria";
             this.TxtCuentaBancaria.Size = new System.Drawing.Size(196, 31);
             this.TxtCuentaBancaria.TabIndex = 21;
@@ -300,6 +309,7 @@
             // 
             this.TxtContacto.Location = new System.Drawing.Point(887, 202);
             this.TxtContacto.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtContacto.MaxLength = 150;
             this.TxtContacto.Name = "TxtContacto";
             this.TxtContacto.Size = new System.Drawing.Size(196, 31);
             this.TxtContacto.TabIndex = 22;
@@ -309,6 +319,7 @@
             // 
             this.TxtTelefonoContacto.Location = new System.Drawing.Point(887, 285);
             this.TxtTelefonoContacto.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtTelefonoContacto.MaxLength = 10;
             this.TxtTelefonoContacto.Name = "TxtTelefonoContacto";
             this.TxtTelefonoContacto.Size = new System.Drawing.Size(196, 31);
             this.TxtTelefonoContacto.TabIndex = 23;
@@ -335,7 +346,7 @@
             this.cLTELEFCONTACTODataGridViewTextBoxColumn,
             this.cLREGIMENDataGridViewTextBoxColumn});
             this.DTGClientes.DataSource = this.cLIENTESBindingSource;
-            this.DTGClientes.Location = new System.Drawing.Point(31, 550);
+            this.DTGClientes.Location = new System.Drawing.Point(31, 506);
             this.DTGClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DTGClientes.Name = "DTGClientes";
             this.DTGClientes.ReadOnly = true;
@@ -487,7 +498,7 @@
             this.BTNInsert.Name = "BTNInsert";
             this.BTNInsert.Size = new System.Drawing.Size(228, 50);
             this.BTNInsert.TabIndex = 36;
-            this.BTNInsert.Text = "Guardar/Actualizar";
+            this.BTNInsert.Text = "Guardar";
             this.BTNInsert.UseVisualStyleBackColor = false;
             this.BTNInsert.Click += new System.EventHandler(this.BTNInsert_Click_1);
             // 
@@ -510,11 +521,24 @@
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
+            // btnactualizar
+            // 
+            this.btnactualizar.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnactualizar.Location = new System.Drawing.Point(1022, 446);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(228, 50);
+            this.btnactualizar.TabIndex = 40;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.UseVisualStyleBackColor = false;
+            this.btnactualizar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FRMCLIENTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2080, 921);
+            this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CMBREGIMEN);
             this.Controls.Add(this.BTNDelete);
@@ -605,5 +629,6 @@
         private System.Windows.Forms.Button BTNInsert;
         private System.Windows.Forms.ComboBox CMBREGIMEN;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnactualizar;
     }
 }
